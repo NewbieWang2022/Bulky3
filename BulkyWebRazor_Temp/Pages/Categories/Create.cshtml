@@ -1,4 +1,6 @@
-﻿@model Category
+﻿@page
+@model BulkyWebRazor_Temp.Pages.Categories.CreateModel
+
 
 <form method="post">
     <div class="border p-3 mt-4">
@@ -7,14 +9,14 @@
             <hr/>
         </div>
         <div class="mb-3">
-            <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control" />
-            <span asp-validation-for="Name" class="text-danger"></span>
+            <label asp-for="Category.Name"></label>
+            <input asp-for="Category.Name" class="form-control" />
+            <span asp-validation-for="Category.Name" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <label>Display Order</label>
-            <input asp-for="DisplayOrder" type="text" class="form-control" />
-            <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+            <label asp-for="Category.DisplayOrder" class="p-0"></label>
+            <input asp-for="Category.DisplayOrder" type="text" class="form-control" />
+            <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
         </div>
 
         <div class="row">
@@ -22,7 +24,7 @@
                 <button type="submit" class="btn btn-primary form-control">Create</button>
             </div>
             <div class="col-6">
-                <a asp-controller="Category" asp-action="Index" class="btn btn-secondary form-control">
+                <a asp-page="/category/index" class="btn btn-secondary form-control">
                     Back to List
                 </a>
             </div>
